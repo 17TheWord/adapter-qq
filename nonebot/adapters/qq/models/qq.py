@@ -77,8 +77,8 @@ class _ReplyAuthor(BaseModel):
 class QQReplyMessage(BaseModel):
     content: str
     attachments: list[Attachment] | None = None
-    message_type: int
-    msg_idx: str
+    message_type: int | None = None
+    msg_idx: str | None = None
     author: _ReplyAuthor | None = None
 
 
